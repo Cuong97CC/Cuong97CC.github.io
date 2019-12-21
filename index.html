@@ -5,36 +5,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 </head>
 <body>
-
-<div class="jumbotron text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+  <div id="nav-bar" class="d-flex">
+    <div class="nav-item nav-brand">
+      <button class="d-block d-md-none nav-bar-toggle fa fa-bars">
+      </button>
+      LNC
     </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
+    <div class="nav-item">Thông tin cá nhân</div>
+    <div class="nav-item">Học vấn</div>
+    <div class="nav-item">Kinh nghiệm</div>
+    <div class="nav-item">Chứng chỉ</div>
   </div>
-</div>
-
+  <div id="sidebar" class="d-block d-md-none sidebar">
+    <h2 class="border-bottom d-flex p-2">
+      <div class="flex-grow-1 text-center sidebar-title">LNC</div>
+      <button class="ml-auto btn btn-sm fa fa-times text-dark hide-sidebar"></button>
+    </h2>
+    <div class="sidebar-item">Thông tin cá nhân</div>
+    <div class="sidebar-item">Học vấn</div>
+    <div class="sidebar-item">Kinh nghiệm</div>
+    <div class="sidebar-item">Chứng chỉ</div>
+  </div>
+  <div id="profile">
+    <div class="mt-5 mb-2 text-center">
+      <img src="images/background.jpg" id="profile-img">
+    </div>
+    <div class="profile-item" id="name">Lê Ngọc Cường</div>
+    <div class="profile-item" id="role">Lập trình viên</div>
+  </div>
 </body>
 </html>
