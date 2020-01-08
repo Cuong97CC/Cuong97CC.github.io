@@ -84,6 +84,7 @@ body:before {
   font-size: 2em;
   border-bottom: 2px solid #aaa;
   position: relative;
+  cursor: pointer;
 }
 .section-header {
   position: relative;
@@ -112,6 +113,7 @@ body:before {
 }
 .section-content {
   justify-content: space-around;
+  padding-top: 5px;
 }
 .section-item {
   padding: 10px;
