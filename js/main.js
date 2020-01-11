@@ -72,9 +72,9 @@ $(document).ready(function() {
 
     var span = document.createElement("span");
     span.classList.add("timeline-text");
-    span.innerText = timeline[i].content;
+    span.innerText = new Date(timeline[i].time).toLocaleDateString("vi") + ": " + timeline[i].content;
     span.style.top = ((timeline[i].time - timeline[0].time) * height / total) + "px";
-    span.setAttribute("title", timeline[i].content);
+    span.setAttribute("title", new Date(timeline[i].time).toLocaleDateString("vi") + ": " + timeline[i].content);
     timelineElement.appendChild(span);
     if (i % 2 == 0) span.classList.add("right");
     span.style.left = i % 2 == 0 ? "calc(50% - " + (5 + arrowWidth + span.offsetWidth) + "px)" : "calc(50% + " + (5 + arrowWidth) + "px)";
