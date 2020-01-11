@@ -130,6 +130,34 @@ body:before {
   font-weight: bold;
   margin-bottom: 10px;
 }
+#timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.timeline-event {
+  width: 10px;
+}
+.timeline-event:nth-of-type(1) {
+  margin-top: 15px;
+}
+.timeline-event:last-of-type {
+  margin-bottom: 15px;
+}
+.timeline-event:empty:before {
+  content: "\200b";
+}
+.timeline-arrow, .timeline-text {
+  position: absolute;
+}
+.timeline-text {
+  padding-top: 3px;
+  max-width: 40%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 @media(max-width: 768px) {
   #nav-bar {
     padding: 0;
