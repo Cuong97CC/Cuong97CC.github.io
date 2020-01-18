@@ -30,6 +30,7 @@ $(document).on("click", ".sidebar-item", function() {
 })
 
 $(document).ready(function() {
+  var date_options = {year: 'numeric', month: 'numeric'};
   var timeline = [
     {
       time: new Date("2017-09-01").getTime(),
@@ -72,9 +73,9 @@ $(document).ready(function() {
 
     var span = document.createElement("span");
     span.classList.add("timeline-text");
-    span.innerText = new Date(timeline[i].time).toLocaleDateString("vi") + ": " + timeline[i].content;
+    span.innerText = new Date(timeline[i].time).toLocaleDateString("vi", date_options) + ": " + timeline[i].content;
     span.style.top = ((timeline[i].time - timeline[0].time) * height / total) + "px";
-    span.setAttribute("title", new Date(timeline[i].time).toLocaleDateString("vi") + ": " + timeline[i].content);
+    span.setAttribute("title", new Date(timeline[i].time).toLocaleDateString("vi", date_options) + ": " + timeline[i].content);
     timelineElement.appendChild(span);
     if (i % 2 == 0) span.classList.add("right");
     span.style.left = i % 2 == 0 ? "calc(50% - " + (5 + arrowWidth + span.offsetWidth) + "px)" : "calc(50% + " + (5 + arrowWidth) + "px)";

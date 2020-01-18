@@ -1,10 +1,10 @@
 :root {
   --main-bg-color: rgba(62, 155, 255, 0.6);
 }
-body {
+#header {
   position: relative;
 }
-body:before {
+#header:before {
   content: "";
   position: absolute;
   top: 0;
@@ -75,7 +75,7 @@ body:before {
 .details {
   background-color: rgba(255, 255, 255, 1);
 }
-.section {
+.section:not(:last-of-type) {
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
 }
@@ -157,6 +157,13 @@ body:before {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+#footer {
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 2px;
+  font-style: italic;
+  color: #aaa;
 }
 @media(max-width: 768px) {
   #nav-bar {

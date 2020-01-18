@@ -14,33 +14,35 @@
   <script src="js/main.js"></script>
 </head>
 <body>
-  <div id="nav-bar" class="d-flex">
-    <div class="nav-item nav-brand">
-      <button class="d-block d-md-none nav-bar-toggle fa fa-bars">
-      </button>
-      LNC
+    <div id="header">
+    <div id="nav-bar" class="d-flex">
+      <div class="nav-item nav-brand">
+        <button class="d-block d-md-none nav-bar-toggle fa fa-bars">
+        </button>
+        LNC
+      </div>
+      <div class="nav-item" data-target="#info">Thông tin</div>
+      <div class="nav-item" data-target="#exp">Quá trình làm việc</div>
+      <div class="nav-item" data-target="#skill">Kỹ năng</div>
+      <div class="nav-item" data-target="#certificate">Chứng chỉ</div>
     </div>
-    <div class="nav-item" data-target="#info">Thông tin</div>
-    <div class="nav-item" data-target="#exp">Kinh nghiệm</div>
-    <div class="nav-item" data-target="#skill">Kỹ năng</div>
-    <div class="nav-item" data-target="#certificate">Chứng chỉ</div>
-  </div>
-  <div id="sidebar" class="d-block d-md-none sidebar">
-    <h2 class="border-bottom d-flex p-2">
-      <div class="flex-grow-1 text-center sidebar-title">LNC</div>
-      <button class="ml-auto btn btn-sm fa fa-times text-dark hide-sidebar"></button>
-    </h2>
-    <div class="sidebar-item" data-target="#info">Thông tin cá nhân</div>
-    <div class="sidebar-item" data-target="#exp">Kinh nghiệm</div>
-    <div class="sidebar-item" data-target="#skill">Kỹ năng</div>
-    <div class="sidebar-item" data-target="#certificate">Chứng chỉ</div>
-  </div>
-  <div id="profile">
-    <div class="mt-5 mb-2 text-center">
-      <img src="images/background.jpg" id="profile-img">
+    <div id="sidebar" class="d-block d-md-none sidebar">
+      <h2 class="border-bottom d-flex p-2">
+        <div class="flex-grow-1 text-center sidebar-title">LNC</div>
+        <button class="ml-auto btn btn-sm fa fa-times text-dark hide-sidebar"></button>
+      </h2>
+      <div class="sidebar-item" data-target="#info">Thông tin cá nhân</div>
+      <div class="sidebar-item" data-target="#exp">Quá trình làm việc</div>
+      <div class="sidebar-item" data-target="#skill">Kỹ năng</div>
+      <div class="sidebar-item" data-target="#certificate">Chứng chỉ</div>
     </div>
-    <div class="profile-item" id="name">Lê Ngọc Cường</div>
-    <div class="profile-item" id="role">Lập trình viên</div>
+    <div id="profile">
+      <div class="mt-5 mb-2 text-center">
+        <img src="images/background.jpg" id="profile-img">
+      </div>
+      <div class="profile-item" id="name">Lê Ngọc Cường</div>
+      <div class="profile-item" id="role">Lập trình viên</div>
+    </div>
   </div>
   <div class="details">
     <div class="container">
@@ -109,7 +111,7 @@
       </div>
       <div class="section" id="exp">
         <div class="text-center mb-2">
-          <span class="section-name">Kinh nghiệm</span>
+          <span class="section-name">Quá trình làm việc</span>
         </div>
         <div class="section-content">
           <div id="timeline"></div>
@@ -132,6 +134,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div id="footer">
+    Le Ngoc Cuong
   </div>
 </body>
 </html>
