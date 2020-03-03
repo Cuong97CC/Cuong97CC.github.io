@@ -15,6 +15,16 @@
   <script src="js/main.js"></script>
 </head>
 <body>
+  <div id="sidebar" class="d-block d-md-none sidebar">
+    <h2 class="border-bottom d-flex p-2">
+      <div class="flex-grow-1 text-center sidebar-title">LNC</div>
+      <button class="ml-auto btn btn-sm fa fa-times text-dark hide-sidebar"></button>
+    </h2>
+    <div class="sidebar-item" data-target="#info">Thông tin cá nhân</div>
+    <div class="sidebar-item" data-target="#exp">Quá trình làm việc</div>
+    <div class="sidebar-item" data-target="#skill">Kỹ năng</div>
+    <div class="sidebar-item" data-target="#certificate">Chứng chỉ</div>
+  </div>
   <div id="header">
     <div id="nav-bar" class="d-flex">
       <div class="nav-item nav-brand">
@@ -26,16 +36,6 @@
       <div class="nav-item" data-target="#exp">Quá trình làm việc</div>
       <div class="nav-item" data-target="#skill">Kỹ năng</div>
       <div class="nav-item" data-target="#certificate">Chứng chỉ</div>
-    </div>
-    <div id="sidebar" class="d-block d-md-none sidebar">
-      <h2 class="border-bottom d-flex p-2">
-        <div class="flex-grow-1 text-center sidebar-title">LNC</div>
-        <button class="ml-auto btn btn-sm fa fa-times text-dark hide-sidebar"></button>
-      </h2>
-      <div class="sidebar-item" data-target="#info">Thông tin cá nhân</div>
-      <div class="sidebar-item" data-target="#exp">Quá trình làm việc</div>
-      <div class="sidebar-item" data-target="#skill">Kỹ năng</div>
-      <div class="sidebar-item" data-target="#certificate">Chứng chỉ</div>
     </div>
     <div id="profile">
       <div class="mt-5 mb-2 text-center">
