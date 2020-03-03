@@ -1,5 +1,5 @@
 :root {
-  --main-bg-color: rgba(62, 155, 255, 0.6);
+  --main-bg-color: rgba(58, 138, 224, 0.6);
 }
 #header {
   position: relative;
@@ -33,11 +33,11 @@
   cursor: pointer;
 }
 .nav-item:not(.nav-brand):hover {
-  background-color: rgb(16, 132, 255);
+  text-decoration: underline;
 }
 .nav-brand:not(button) {
-  font-size: 2em;
-  font-style: italic;
+  font: 400 2em/1.2 'Merienda One', Helvetica, sans-serif;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
 }
 .nav-bar-toggle {
   margin-right: 15px;
@@ -74,6 +74,7 @@
 }
 .details {
   background-color: rgba(255, 255, 255, 1);
+  min-height: calc(100vh - 494px);
 }
 .section:not(:last-of-type) {
   padding: 10px 0;
@@ -161,9 +162,10 @@
 #footer {
   border-top: 1px solid #ddd;
   text-align: center;
-  padding: 2px;
+  padding: 5px;
   font-style: italic;
   color: #aaa;
+  font: 400 1em/1.2 'Merienda One', Helvetica, sans-serif;
 }
 @media(max-width: 768px) {
   #nav-bar {

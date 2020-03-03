@@ -43,6 +43,11 @@ $(document).ready(function() {
       title: "Làm việc Onsite tại Toyota Việt Nam"
     },
     {
+      time: new Date("2020-02-01").getTime(),
+      content: "Công ty Sao Khuê",
+      title: "Tiếp tục làm việc tại công ty Sao Khuê"
+    },
+    {
       time: new Date().getTime(),
       content: "Hiện tại",
       title: "Hiện tại"
