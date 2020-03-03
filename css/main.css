@@ -144,7 +144,7 @@
   margin-top: 15px;
 }
 .timeline-event:last-of-type {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .timeline-event:empty:before {
   content: "\200b";
@@ -155,9 +155,9 @@
 .timeline-text {
   padding-top: 3px;
   max-width: 40%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+}
+.timeline-text.right {
+  text-align: right;
 }
 #footer {
   border-top: 1px solid #ddd;
