@@ -7,7 +7,7 @@
   <link rel="icon" type="image/x-icon" href="images/icon.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One" type="text/css">
   <link rel="stylesheet" href="css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -20,10 +20,11 @@
       <div class="flex-grow-1 text-center sidebar-title">LNC</div>
       <button class="ml-auto btn btn-sm fa fa-times text-dark hide-sidebar"></button>
     </h2>
-    <div class="sidebar-item" data-target="#info">Thông tin cá nhân</div>
-    <div class="sidebar-item" data-target="#exp">Quá trình làm việc</div>
+    <div class="sidebar-item" data-target="#info">Thông tin</div>
     <div class="sidebar-item" data-target="#skill">Kỹ năng</div>
+    <div class="sidebar-item" data-target="#project">Dự án</div>
     <div class="sidebar-item" data-target="#certificate">Chứng chỉ</div>
+    <div class="sidebar-item" data-target="#exp">Quá trình làm việc</div>
   </div>
   <div id="header">
     <div id="nav-bar" class="d-flex">
@@ -33,9 +34,10 @@
         LNC
       </div>
       <div class="nav-item" data-target="#info">Thông tin</div>
-      <div class="nav-item" data-target="#exp">Quá trình làm việc</div>
       <div class="nav-item" data-target="#skill">Kỹ năng</div>
+      <div class="nav-item" data-target="#project">Dự án</div>
       <div class="nav-item" data-target="#certificate">Chứng chỉ</div>
+      <div class="nav-item" data-target="#exp">Quá trình làm việc</div>
     </div>
     <div id="profile">
       <div class="mt-5 mb-2 text-center">
@@ -45,13 +47,13 @@
       <div class="profile-item" id="role">Lập trình viên</div>
     </div>
   </div>
-  <div class="details">
+  <div class="details" id="details">
     <div class="container">
       <div class="section" id="info">
         <div class="text-center mb-2">
-          <span class="section-name">Thông tin</span>
+          <a class="section-name text-dark" data-toggle="collapse" href="#info-content">Thông tin</a>
         </div>
-        <div class="section-content row">
+        <div class="section-content row collapse" id="info-content" data-parent="#details">
           <div class="col-lg-4 col-md-6 mb-3">
             <div class="section-item">
               <div class="fa fa-info-circle item-icon"></div>
@@ -110,30 +112,211 @@
           </div>
         </div>
       </div>
-      <div class="section" id="exp">
-        <div class="text-center mb-2">
-          <span class="section-name">Quá trình làm việc</span>
-        </div>
-        <div class="section-content">
-          <div id="timeline"></div>
-        </div>
-      </div>
       <div class="section" id="skill">
         <div class="text-center mb-2">
-          <span class="section-name">Kỹ năng</span>
+          <a class="section-name text-dark" data-toggle="collapse" href="#skill-content">Kỹ năng</a>
         </div>
-        <div class="section-content">
-
+        <div class="section-content row justify-content-center collapse"
+          id="skill-content" data-parent="#details">
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+            <div class="section-item d-flex">
+              <div class="skill-icon mr-3">
+                <img src="images/js.png">
+              </div>
+              <div class="flex-grow-1 d-flex flex-column justify-content-around">
+                <div class="skill-title">
+                  Javascript
+                </div>
+                <div class="skill-level">
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+            <div class="section-item d-flex">
+              <div class="skill-icon mr-3">
+                <img src="images/mongodb.png">
+              </div>
+              <div class="flex-grow-1 d-flex flex-column justify-content-around">
+                <div class="skill-title">
+                  MongoDB
+                </div>
+                <div class="skill-level">
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+            <div class="section-item d-flex">
+              <div class="skill-icon mr-3">
+                <img src="images/html.png">
+              </div>
+              <div class="flex-grow-1 d-flex flex-column justify-content-around">
+                <div class="skill-title">
+                  Html
+                </div>
+                <div class="skill-level">
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+            <div class="section-item d-flex">
+              <div class="skill-icon mr-3">
+                <img src="images/css.png">
+              </div>
+              <div class="flex-grow-1 d-flex flex-column justify-content-around">
+                <div class="skill-title">
+                  Css
+                </div>
+                <div class="skill-level">
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+            <div class="section-item d-flex">
+              <div class="skill-icon mr-3">
+                <img src="images/mysql.png">
+              </div>
+              <div class="flex-grow-1 d-flex flex-column justify-content-around">
+                <div class="skill-title">
+                  MySQL
+                </div>
+                <div class="skill-level">
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+            <div class="section-item d-flex">
+              <div class="skill-icon mr-3">
+                <img src="images/ruby.png">
+              </div>
+              <div class="flex-grow-1 d-flex flex-column justify-content-around">
+                <div class="skill-title">
+                  Ruby
+                </div>
+                <div class="skill-level">
+                  <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+            <div class="section-item d-flex">
+              <div class="skill-icon mr-3">
+                <img src="images/java.webp">
+              </div>
+              <div class="flex-grow-1 d-flex flex-column justify-content-around">
+                <div class="skill-title">
+                  Java
+                </div>
+                <div class="skill-level">
+                  <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="30"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="project">
+        <div class="text-center mb-2">
+          <a class="section-name text-dark" data-toggle="collapse" href="#project-content">Dự án</a>
+        </div>
+        <div class="section-content row justify-content-center collapse" id="project-content" data-parent="#details">
+          <div class="col-lg-4 col-md-6 mb-3">
+            <div class="section-item">
+              <div class="project-title">
+                <a href="https://hoclieu.sachmem.vn" target="_blank" rel="noopener">Học liệu</a>
+              </div>
+              <div class="project-stack">
+                <img src="images/angular.png" title="Angular"> +
+                <img src="images/nodejs.png" title="NodeJS"> +
+                <img src="images/mongodb.png" title="MongoDB">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-3">
+            <div class="section-item">
+              <div class="project-title">
+                <a href="https://sachmem.vn" target="_blank" rel="noopener">Sách mềm</a>
+              </div>
+              <div class="project-stack">
+                <img src="images/angularjs.svg" title="AngularJS"> +
+                <img src="images/jquery.webp" title="JQuery"> +
+                <img src="images/rails.png" title="Ruby on Rails"> +
+                <img src="images/mysql.png" title="MySQL">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-3">
+            <div class="section-item">
+              <div class="project-title">
+                Toyota TMSS
+              </div>
+              <div class="project-stack">
+                <img src="images/angular.png" title="Angular"> +
+                <img src="images/spring.png" title="Spring"> +
+                <img src="images/sqlserver.png" title="SQL Server">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-3">
+            <div class="section-item">
+              <div class="project-title">
+                <a href="https://my-tools-226d3.firebaseapp.com" target="_blank" rel="noopener">My Tools</a>
+                <span class="note">(Side project)</span>
+              </div>
+              <div class="project-stack">
+                <img src="images/angular.png" title="Angular"> +
+                <img src="images/nodejs.png" title="NodeJS"> +
+                <img src="images/mongodb.png" title="MongoDB">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-3">
+            <div class="section-item">
+              <div class="project-title">
+                <a href="https://www.amazon.com/Cuong-Feeding-Frenzy-Remake/dp/B072MP6D26" target="_blank" rel="noopener">
+                  Simple game
+                </a>
+                <span class="note">(Side project)</span>
+              </div>
+              <div class="project-stack">
+                <img src="images/unity.png" title="Unity">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="section" id="certificate">
         <div class="text-center mb-2">
-          <span class="section-name">Chứng chỉ</span>
+          <a class="section-name text-dark" data-toggle="collapse" href="#certificate-content">Chứng chỉ</a>
         </div>
-        <div class="section-content row">
+        <div class="section-content row collapse" id="certificate-content" data-parent="#details">
           <div class="col-lg-4 col-md-6 mb-3">
             <div class="section-item">
-              <div class="fa fa-certificate item-icon"></div>
+              <div class="fa fa-certificate item-icon text-warning"></div>
               <div class="item-header">Toeic</div>
               <div class="item-content">
                 <div class="d-flex p-2">
@@ -147,6 +330,14 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="section" id="exp">
+        <div class="text-center mb-2">
+          <a class="section-name text-dark" data-toggle="collapse" href="#exp-content">Quá trình làm việc</a>
+        </div>
+        <div class="section-content collapse" id="exp-content" data-parent="#details">
+          <div id="timeline"></div>
         </div>
       </div>
     </div>

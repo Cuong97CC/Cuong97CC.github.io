@@ -1,5 +1,5 @@
 :root {
-  --main-bg-color: rgba(58, 138, 224, 0.6);
+  --main-bg-color: rgba(41, 122, 207, 0.6);
 }
 #header {
   position: relative;
@@ -31,13 +31,13 @@
   color: white;
   font-size: 1.2em;
   cursor: pointer;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
 }
 .nav-item:not(.nav-brand):hover {
   text-decoration: underline;
 }
 .nav-brand:not(button) {
   font: 400 2em/1.2 'Merienda One', Helvetica, sans-serif;
-  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
 }
 .nav-bar-toggle {
   margin-right: 15px;
@@ -46,6 +46,43 @@
   border-radius: 5px;
   color: white;
   padding: 5px 8px;
+}
+@media(max-width: 768px) {
+  #nav-bar {
+    padding: 0;
+  }
+  .nav-brand button {
+    margin-left: 10px;
+  }
+  .nav-item:not(.nav-brand) {
+    display: none;
+  }
+  .nav-brand button:hover {
+    background-color: rgb(16, 132, 255);
+  }
+  .nav-brand {
+    justify-content: flex-start;
+  }
+  .sidebar {
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    transition: all 0.5s ease;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .sidebar-item {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .sidebar-item:hover {
+    background: #eeeeee;
+  }
 }
 #profile {
   background-color: var(--main-bg-color);
@@ -76,8 +113,10 @@
   background-color: rgba(255, 255, 255, 1);
   min-height: calc(100vh - 494px);
 }
-.section:not(:last-of-type) {
+.section {
   padding: 10px 0;
+}
+.section:not(:last-of-type) {
   border-bottom: 1px solid #ccc;
 }
 .section-name {
@@ -85,7 +124,9 @@
   font-size: 2em;
   border-bottom: 2px solid #aaa;
   position: relative;
-  cursor: pointer;
+}
+.section-name:hover {
+  text-decoration: none!important;
 }
 .section-header {
   position: relative;
@@ -170,40 +211,26 @@
 .sidebar-title {
   font: 400 1em/1.2 'Merienda One', Helvetica, sans-serif;
 }
-@media(max-width: 768px) {
-  #nav-bar {
-    padding: 0;
-  }
-  .nav-brand button {
-    margin-left: 10px;
-  }
-  .nav-item:not(.nav-brand) {
-    display: none;
-  }
-  .nav-brand button:hover {
-    background-color: rgb(16, 132, 255);
-  }
-  .nav-brand {
-    justify-content: flex-start;
-  }
-  .sidebar {
-    background: #ffffff;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    transition: all 0.5s ease;
-  }
-  .sidebar.open {
-    left: 0;
-  }
-  .sidebar-item {
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  .sidebar-item:hover {
-    background: #eeeeee;
-  }
+.skill-icon img {
+  width: 50px;
+  height: 50px;
+}
+.skill-title {
+  text-align: left;
+}
+.skill-level .progress {
+  height: 0.6rem!important;
+}
+.project-title {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+.project-stack img {
+  height: 40px;
+  width: auto;
+  margin: 0 5px;
+}
+.note {
+  color: #999;
+  font-size: 0.8em;
 }
