@@ -30,6 +30,42 @@ function scrollTo(id) {
 
 $(document).ready(function() {
   $(".section-content").eq(0).collapse("show");
+
+  var stackoverflowInfos = `
+    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+  `;
+  // Lấy dữ liệu profile stackoverflow
+  $.get("https://api.stackexchange.com/2.2/users/11711316?site=stackoverflow", function(data) {
+    if (data.items && data.items.length) {
+      var user = data.items[0];
+      stackoverflowInfos = `
+      <div class="d-flex align-items-center">
+        <div>
+          <img width="60" height="60" alt="${user.display_name}" src="${user.profile_image}">
+        </div>
+        <div class="d-flex flex-column ml-3 text-right">
+          <div class="d-flex align-items-center">
+            <img src="images/stackoverflow.png" width="20" height="20">
+            <b class="ml-1">${user.display_name}</b>
+          </div>
+          <b>${user.reputation}</b>
+          <div>
+            <span class="gold-badge">● ${user.badge_counts.gold}</span>
+            <span class="silver-badge">● ${user.badge_counts.silver}</span>
+            <span class="bronze-badge">● ${user.badge_counts.bronze}</span>
+          </div>
+        </div>
+      </div>`;
+    }
+    $('#stackoverflow').popover({
+      animations: true,
+      placement: 'bottom',
+      html: true,
+      trigger: 'hover',
+      content: stackoverflowInfos
+    })
+  })
 })
 
 $(window).on("resize", calculateTimeline);

@@ -240,6 +240,15 @@
   color: #999;
   font-size: 0.8em;
 }
+.gold-badge {
+  color: #facc04;
+}
+.silver-badge {
+  color: #b4b8bc;
+}
+.bronze-badge {
+  color: #d1a684;
+}
 @keyframes slide {
   0% {background-position: 0%}
   25% {background-position: 25%}
