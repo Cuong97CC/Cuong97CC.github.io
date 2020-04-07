@@ -1,3 +1,6 @@
+const STACKOVERFLOW_KEY = "JzyQ**N*J9t1FG8rUzAOKw((";
+const STACKOVERFLOW_USER_ID = "11711316";
+
 $(document).on("click", ".nav-bar-toggle", function() {
   $(".sidebar").toggleClass("open");
 })
@@ -36,7 +39,7 @@ $(document).ready(function() {
     <span class="sr-only">Loading...</span>
   `;
   // Lấy dữ liệu profile stackoverflow
-  $.get("https://api.stackexchange.com/2.2/users/11711316?site=stackoverflow", function(data) {
+  $.get(`https://api.stackexchange.com/2.2/users/${STACKOVERFLOW_USER_ID}?key=${STACKOVERFLOW_KEY}&site=stackoverflow`, function(data) {
     if (data.items && data.items.length) {
       var user = data.items[0];
       stackoverflowInfos = `
