@@ -94,6 +94,11 @@ function createTimeline() {
       title: "Tiếp tục làm việc tại công ty Sao Khuê"
     },
     {
+      time: new Date("2020-05-01").getTime(),
+      content: "Công ty DNS Media",
+      title: "Làm việc tại công ty DNS Media"
+    },
+    {
       time: new Date().getTime(),
       content: "Hiện tại",
       title: "Hiện tại"
