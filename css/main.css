@@ -221,7 +221,7 @@
   width: 50px;
   height: 50px;
 }
-.skill-title {
+.skill-title, .skill-level {
   text-align: left;
 }
 .skill-level .progress {
